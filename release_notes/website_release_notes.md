@@ -3,6 +3,98 @@
 * Source cod package release notes on GitHub are here: https://github.com/iedadata/EarthChemLibrary/releases
 
 Public facing website release notes are here: [TBD]
+
+#### January 2018
+
+* Version ECL v3.5.0 release notes. Release date: Jan. 29, 2018
+
+Improvements:
+
+    Upgraded ECL DOI XML records to DataCite schema V4.0.
+        Added new fields to DOI XML records. Such as IGSN, GeoBoundingBox, GeoPoint, CreatedDate, etc. See details here .
+        Changed DOI number generation method.
+    Automated DOI XML record generation and registration process. See detail here .
+    Added UI to generate email notification for quarterly data usage report.
+    Automated download statistics plot.
+
+New Feature:
+
+    Implemented DOI XML record web service.
+
+Database changes:
+
+    Added new column 'dataset_doi_created' in submissions table.
+    Added new ECL and IEDA related keyword tables and mapping table.
+    Added new person external identifier table for ORCID etc.
+    Added new cruise mapping table.
+    Added new submission relationship table.
+    Added XML feature for database.
+
+
+#### Novemember 2015
+
+* Version 3.3 release notes (Nov. 6, 2015)
+
+GRL-181, GRL-228 and GRL-232, GRL-222
+
+1. Database schema enhancement: Add new table to keep geometry information. Modified an existing table schema to link IGSN with geometry information.
+
+2. Several scripts are written to backfill all geometry and IGSNs information into database.
+
+3. The script to automate uploading IGSNs and geometry information is implemented.
+
+4. Map Search is implemented.
+
+5. Bug fixes in search by IGSN.
+
+#### July 2015
+
+* Version 3.2 release notes (July 24, 2015)
+
+Bug Fixes:
+
+    GRL-219, Align display of file names on admin view
+    GRL-224, Add Published Lead Authors to drop down list for this quarter
+    GRL-207, Fix error for file download in Admin that happens in the Chrome browser
+
+Enhancements:
+
+    GRL-206, Submission table clean up and new table status is created.
+        lead_author, co_author, deleted, removed and approval columns are removed status_id column is added.
+    GRL-214, Consolidate search.php and submission_search.php views.
+        Aligned what the Admin search sees to be included in the public view search.
+    GRL-223, Inform user and ECL admin if file upload is not successful.
+        Added a Approval Status section in the usual email admin gets when a new submission is in ECL.
+        A secondary email has been created to alert the admin. This is when there is a bigger issue usually on the connectivity of the user side.
+        A tertiary email has been created to alert the admin. This is when there is issues with the external submission.
+    GRL-218, Improvement to Author/Person search (James Gill example)
+    GRL-209, Convert to Dynamic checkboxes
+        Checkbox choices  pull from database
+        Add new Data type SocialScience to the list
+    GRL-238, Add version number to ecl pages browse, search, submit, user home and admin home.
+    GRL-237, various DB changes for consolidation and cleanup.
+
+New Functionality: 
+
+     GRL-212, Add capability for users to save a session if they cannot complete a submission.
+        Make a new status for the submission. 0 Incomplete , 1 Submitted, 2 Published , 3 Rejected , 4 Archived, 5 ExternalResource name the column as submissions.status_id.
+        Enhance View My EarthChem Library Records page to include displaying all status 5 submissions which belongs to the person who is logging into geopass. Link will read "Continue Submission".
+        Enhance the myECL home page to notify users to continue with their save and incomplete submission.
+        Strip out queries in various views and construct classes for them. This will reduce duplicates for query calls.
+        Prefill all form values from the saved session. Even for dynamic sections such as co authors and lead author from drop down or new lead author.
+        Place checks for access to users on their own form. Trying to access other saved forms should be forbidden.
+        Let users edit files before final submission. (reupdate)
+        Admins do not need to be notified by email of a saved submission
+        Cosmetic changes to the page "View MY ECL records" and main myECL Page
+    GRL-228 Implement search by IGSN
+        Add new table public.dataset_file_external_identifier.
+        search includes new field for igsn number
+            The igsn field is not required and no entry is made the search will continue without user prompts.
+            Take in igsn number min range 9 to max range 10
+            If a user enters a igsn less than 9 alphanumeric digits a error message prompts the user to fix the entry before search submission.
+            If a user enters a igsn more than 10 alphanumeric digits a error message prompts the user to fix the entry before search submission.
+
+
 #### January 2015
 
 * Version 3.1 (expected deploy to dev on Jan 5, 2015)
@@ -69,9 +161,3 @@ Other things to remind users:
 
     Link to DOI
     Link to Award
-
-Add Labels
-Child Pages (3)   Hide Child Pages  |  View in Hierarchy  |  Add Child Page
-[ECL 3.5.0 Release notes] ECL 3.5.0 Release notes
-[ECL v3.2 release notes] ECL v3.2 release notes
-[ECL v3.3 release note] ECL v3.3 release note
