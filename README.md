@@ -5,4 +5,4 @@ ECL: EarthChem Library
 
 ECL is a data repository that archives, publishes and makes accessible data and other digital content from geoscience research (analytical data, data syntheses, models, technical reports, etc).
 
-This repository contains all documentations related to ECL infrustructure, software design and development.
+This repository contains all documentations related to ECL infrastructure, software design, and development. 
