@@ -1,8 +1,12 @@
-* reverse chronological order
+
 
 * Source cod package release notes on GitHub are here: https://github.com/iedadata/EarthChemLibrary/releases
 
 ## EarthChem Library Repository - Release Notes
+
+Version | Release Date
+--------|-------------
+[v4.0.0](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-400)  | August 26, 2020
 
 
 #### Version 4.0.0
