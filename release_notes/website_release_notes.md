@@ -89,7 +89,7 @@
 
 6. Improved clarity and number of metadata fields displayed on the ECL landing page.
 ```
-### Version 3.6.5
+#### Version 3.6.5
 * April 2019
 ```
 1. Users can now link their ECL datasets to related identifiers and information such as IGSN, Smithsonian Volcano Number, and Cruise DOI.
