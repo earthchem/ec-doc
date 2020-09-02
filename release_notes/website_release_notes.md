@@ -8,13 +8,13 @@ Version | Release Date
 [v 4.0.0](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-400)  | August 26, 2020
 --------|-------------
 [v 3.6.9](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-369)  | April 27, 2020
---------|-------------
+
 [v 3.6.8](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-368)  | February 4, 2020
---------|-------------
+
 [v 3.6.7](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-367)  | September 23, 2019
---------|-------------
+
 [v 3.6.6](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-366)  | April 26, 2019
---------|-------------
+
 [v 3.6.5](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-365)  | April 12, 2019
 --------|-------------
 [v 3.6.4](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-364)  | December 19, 2018
