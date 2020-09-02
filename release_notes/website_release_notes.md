@@ -6,8 +6,49 @@
 
 Version | Release Date
 --------|-------------
-[v4.0.0](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-400)  | August 26, 2020
-
+[v 4.0.0](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-400)  | August 26, 2020
+--------|-------------
+[v 3.6.9](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-369)  | April 27, 2020
+--------|-------------
+[v 3.6.8](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-368)  | February 4, 2020
+--------|-------------
+[v 3.6.7](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-367)  | September 23, 2019
+--------|-------------
+[v 3.6.6](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-366)  | April 26, 2019
+--------|-------------
+[v 3.6.5](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-365)  | April 12, 2019
+--------|-------------
+[v 3.6.4](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-364)  | December 19, 2018
+--------|-------------
+[v 3.6.3](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-363)  | August 10, 2018
+--------|-------------
+[v 3.6.1, v 3.6.2](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#versions-361-and-362)  | July 13, 2018
+--------|-------------
+[v 3.6.0](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-360)  | May 4, 2018
+--------|-------------
+[v 3.5.1](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-351)  | March 20, 2018
+--------|-------------
+[v 3.5.0](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-350)  | January 31, 2018
+--------|-------------
+[v 3.4.0](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-340)  | November 8, 2017
+--------|-------------
+[v 3.3.0](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-330)  | November 6, 2017
+--------|-------------
+[v 3.2.0](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-320)  | July 24, 2015
+--------|-------------
+[v 3.1.0](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-310)  | January 31, 2015
+--------|-------------
+[v 3.0.0](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-300)  | November 21, 2014
+--------|-------------
+[v 2.5.2](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-252)  | April 22, 2014
+--------|-------------
+[v 2.5.1](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-251)  | February 21, 2014
+--------|-------------
+[v 2.5.0](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-250)  | February 4, 2014
+--------|-------------
+[v 2.4.1](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-400)  | October 25, 2013
+--------|-------------
+[v 2.4.0](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-400)  | October 4, 2013
 
 #### Version 4.0.0
 * August 2020
@@ -194,10 +235,15 @@ Database changes:
     Added new submission relationship table.
     Added XML feature for database.
 
+#### Version 3.4.0
+* November 2017
+```
+User download statistics, including email, IP address, and submission ID, tracked internally in the ECL database, rather than in an external system.
+Restyled download disclaimer page.
+```
+#### Version 3.3.0
 
-#### Version 3.3
-
-*  November 2015 Nov. 6, 2015)
+*  November 2015 (Nov. 6, 2015)
 ```
 GRL-181, GRL-228 and GRL-232, GRL-222
 
@@ -211,7 +257,7 @@ GRL-181, GRL-228 and GRL-232, GRL-222
 
 5. Bug fixes in search by IGSN.
 ```
-#### Version 3.2
+#### Version 3.2.0
 
 * July 2015 (July 24, 2015)
 
@@ -259,7 +305,7 @@ New Functionality:
             If a user enters a igsn more than 10 alphanumeric digits a error message prompts the user to fix the entry before search submission.
 
 
-#### Version 3.1
+#### Version 3.1.0
 * January 2015  
 ```
     Inform user and ECL admin if file upload is not successful
@@ -270,7 +316,7 @@ New Functionality:
     Fix chrome error during file download
     Clean up back end of dataset_file_list and co-author columns
 ```
-#### Version 3.0
+#### Version 3.0.0
 * November 2014
 ```
     Changes to backend, ECL source code moved to GitHub
