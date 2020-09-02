@@ -5,7 +5,6 @@
 ## EarthChem Library Repository - Release Notes
 
 Version | Release Date
---------|-------------
 [v 4.0.0](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-400)  | August 26, 2020
 --------|-------------
 [v 3.6.9](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-369)  | April 27, 2020
