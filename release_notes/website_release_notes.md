@@ -1,6 +1,6 @@
 
 
-* Source cod package release notes on GitHub are here: https://github.com/iedadata/EarthChemLibrary/releases
+* Source code package release notes on GitHub are here: https://github.com/iedadata/EarthChemLibrary/releases
 
 ## EarthChem Library Repository - Release Notes
 
