@@ -1,4 +1,4 @@
-
+   [![NSF-1948806](https://img.shields.io/badge/NSF-1928366-blue.svg)](https://nsf.gov/awardsearch/showAward?AWD_ID=1948806)
 
 * Source code package release notes on GitHub are here: https://github.com/iedadata/EarthChemLibrary/releases
 
