@@ -1,0 +1,62 @@
+<HTML>
+<Header>
+<Title>public._overview_constraint_info(IN ovschema name, IN ovtable name, IN ovcolumn name, OUT refschema name, OUT reftable name, OUT refcolumn name, OUT factor integer) - Procedure</Title>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<Link href="../css/doc.css" rel="stylesheet" type="text/css">
+</Header>
+<Body>
+<table class="logo">
+<tr>
+<td class="logo">grl [ecl.xml]</td>
+</tr>
+</table>
+<table class="horzMenu">
+<tr>
+<td class="horzMenu"><a class="horzMenu" href="../index.html"> Home</a></td><td class="horzMenu">|</td><td class="horzMenu"><a class="horzMenu" href="../tables/index.html">Tables</a></td><td class="horzMenu">|</td><td class="horzMenu"><a class="horzMenu" href="../schemas/index.html">Schemas</a></td><td class="horzMenu">|</td><td class="horzMenu"><a class="horzMenu" href="../diagrams/index.html">Diagrams</a></td><td class="horzMenu">|</td><td class="horzMenu"><a class="horzMenu" href="../foreignKeys/index.html">Foreign Keys</a></td><td class="horzMenu">|</td><td class="horzMenu"><a class="horzMenu" href="../indexes/index.html">Indexes</a></td><td class="horzMenuFiller"></td>
+</tr>
+</table>
+<hr>
+<table class="flat">
+<tr class="banner">
+<td class="title_nm">public._overview_constraint_info(IN ovschema name, IN ovtable name, IN ovcolumn name, OUT refschema name, OUT reftable name, OUT refcolumn name, OUT factor integer)</td><td class="watermark_right">(Procedure)</td>
+</tr>
+<tr>
+<td class="key">Name</td><td class="value">public._overview_constraint_info(IN ovschema name, IN ovtable name, IN ovcolumn name, OUT refschema name, OUT reftable name, OUT refcolumn name, OUT factor integer)</td>
+</tr>
+<tr>
+<td class="key">Comment</td><td class="value"> </td>
+</tr>
+<tr>
+<td class="key">Src</td><td class="value">
+<pre>
+CREATE OR REPLACE FUNCTION public.ecl_remove_dataset_file_list_id(subid integer, fid integer) 
+  RETURNS boolean AS 
+$$ 
+DECLARE
+ curP RECORD;
+ deleteid BIGINT;
+BEGIN
+    -- Check this dataset_file_list_id is associated to this submission id. If not, we do nothing. Just be caucious about deletion. 
+    select dataset_file_list_id into deleteid from dataset_file_list where dataset_file_list_id = fid and submission_id = subid;
+    IF NOT FOUND THEN
+      RAISE EXCEPTION '(submission id [%d] and  dataset_file_list %d does not exist', subid, fid;
+    END IF;
+    
+    IF deleteid <> 0 THEN
+    
+       delete from  dataset_file_geometry where  dataset_file_list_id = deleteid;
+        
+    END IF;
+    delete from dataset_file_list where submission_id = subid and dataset_file_list_id = deleteid;
+    RETURN true::boolean;
+    
+END;
+$$
+  LANGUAGE plpgsql VOLATILE 
+  COST 100;
+</pre>
+</td>
+</tr>
+</table>
+</Body>
+</HTML>

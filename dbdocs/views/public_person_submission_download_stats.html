@@ -1,0 +1,69 @@
+<HTML>
+<Header>
+<Title>person_submission_download_stats - View</Title>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<Link href="../css/doc.css" rel="stylesheet" type="text/css">
+</Header>
+<Body>
+<table class="logo">
+<tr>
+<td class="logo">grl [ecl.xml]</td>
+</tr>
+</table>
+<table class="horzMenu">
+<tr>
+<td class="horzMenu"><a class="horzMenu" href="../index.html"> Home</a></td><td class="horzMenu">|</td><td class="horzMenu"><a class="horzMenu" href="../tables/index.html">Tables</a></td><td class="horzMenu">|</td><td class="horzMenu"><a class="horzMenu" href="../schemas/index.html">Schemas</a></td><td class="horzMenu">|</td><td class="horzMenu"><a class="horzMenu" href="../diagrams/index.html">Diagrams</a></td><td class="horzMenu">|</td><td class="horzMenu"><a class="horzMenu" href="../foreignKeys/index.html">Foreign Keys</a></td><td class="horzMenu">|</td><td class="horzMenu"><a class="horzMenu" href="../indexes/index.html">Indexes</a></td><td class="horzMenuFiller"></td>
+</tr>
+</table>
+<hr>
+<table class="flat">
+<tr class="banner">
+<td class="title_nm">person_submission_download_stats</td><td class="watermark_right">(View)</td>
+</tr>
+<tr>
+<td class="key">Name</td><td class="value">person_submission_download_stats</td>
+</tr>
+<tr>
+<td class="key">SQL</td><td class="value">
+<pre>SELECT
+    p.first_name AS last_name,
+    p.last_name AS first_name,
+    p.email,
+    p.submission_id,
+    d.life_time_download_cnt
+FROM ( SELECT p_1.first_name,
+    p_1.last_name,
+    p_1.email,
+    a.submission_id
+FROM author_list a
+    JOIN person p_1 ON p_1.person_num = a.person_num
+        AND a.author_order = 1
+        AND p_1.email IS NOT NULL
+    JOIN submissions s ON a.submission_id = s.submission_id
+        AND s.release_date &lt; now()
+        AND s.status_id = 2
+        AND s.owner &lt;&gt; 158
+        AND a.person_num IS NOT NULL UNION SELECT g.first_name,
+    g.last_name,
+    g.email,
+    s.submission_id
+FROM submissions s
+    JOIN grl_user g ON g.account_id = s.created_by
+        AND g.last_name::text &lt;&gt; 'EarthChem'::text
+        AND s.status_id = 2
+        AND s.release_date &lt;= now()
+        AND s.owner &lt;&gt; 158) p
+    JOIN ( SELECT download_stats.submission_id,
+    count(download_stats.submission_id) AS life_time_download_cnt
+FROM download_stats
+WHERE download_stats.submission_id IS NOT NULL
+GROUP BY download_stats.submission_id) d ON d.submission_id = p.submission_id
+ORDER BY p.last_name,
+    p.first_name,
+    p.email,
+    p.submission_id</pre>
+</td>
+</tr>
+</table>
+</Body>
+</HTML>

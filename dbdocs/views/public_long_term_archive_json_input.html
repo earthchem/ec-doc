@@ -1,0 +1,70 @@
+<HTML>
+<Header>
+<Title>long_term_archive_json_input - View</Title>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<Link href="../css/doc.css" rel="stylesheet" type="text/css">
+</Header>
+<Body>
+<table class="logo">
+<tr>
+<td class="logo">grl [ecl.xml]</td>
+</tr>
+</table>
+<table class="horzMenu">
+<tr>
+<td class="horzMenu"><a class="horzMenu" href="../index.html"> Home</a></td><td class="horzMenu">|</td><td class="horzMenu"><a class="horzMenu" href="../tables/index.html">Tables</a></td><td class="horzMenu">|</td><td class="horzMenu"><a class="horzMenu" href="../schemas/index.html">Schemas</a></td><td class="horzMenu">|</td><td class="horzMenu"><a class="horzMenu" href="../diagrams/index.html">Diagrams</a></td><td class="horzMenu">|</td><td class="horzMenu"><a class="horzMenu" href="../foreignKeys/index.html">Foreign Keys</a></td><td class="horzMenu">|</td><td class="horzMenu"><a class="horzMenu" href="../indexes/index.html">Indexes</a></td><td class="horzMenuFiller"></td>
+</tr>
+</table>
+<hr>
+<table class="flat">
+<tr class="banner">
+<td class="title_nm">long_term_archive_json_input</td><td class="watermark_right">(View)</td>
+</tr>
+<tr>
+<td class="key">Name</td><td class="value">long_term_archive_json_input</td>
+</tr>
+<tr>
+<td class="key">SQL</td><td class="value">
+<pre>SELECT
+    s.submission_id,
+    ( SELECT row_to_json(aaa.*) AS row_to_json
+FROM ( SELECT s.title AS "itemName",
+    translate(btrim(date_trunc('second'::text,
+    'now'::text::timestamp(0) with time zone)::text),
+    ' '::text,
+    'T'::text) AS "jobSubmissionDate",
+    ( SELECT array_to_json(ARRAY[( SELECT row_to_json(xx.*) AS row_to_json
+FROM ( SELECT 'DOI' AS "identifierType",
+    s.dataset_doi AS identifier) xx),
+    ( SELECT row_to_json(yy.*) AS row_to_json
+FROM ( SELECT 'EarthChem submission_ID' AS "identifierType",
+    concat('urn:ecl:submission:',
+    s.submission_id) AS identifier) yy)]) AS array_to_json) AS identifiers,
+    ( SELECT row_to_json(zz.*) AS row_to_json
+FROM ( SELECT 'http: concat('https: CASE WHEN s.dataset_doi::text &lt;&gt; ''::text THEN ltrim(s.dataset_doi::text,
+    'doi:'::text) ELSE NULL::text END) AS "metadataFileLocation") zz) AS "metadataLink",
+    ( SELECT array_to_json(array_agg(row_to_json(d.*))) AS array_to_json
+FROM ( SELECT concat('%path%/submissions/in/'::text,
+    s.submission_id,
+    '/'::text,
+    dfl.dataset_server_filename) AS "fileLocation",
+    concat(dff.data_file_format,
+    ': ',
+    dff.data_file_format_name) AS format
+FROM dataset_file_list dfl,
+    data_file_formats dff
+WHERE s.submission_id = dfl.submission_id
+        AND dfl.data_file_format_id = dff.data_file_format_id) d) AS "contentItems",
+    ''::text AS "archiveAccessionDate",
+    ''::text AS "archiveID",
+    'EarthChem Library'::text AS "sourceSystem",
+    'getFile-dcv4-tgzbagit-v2'::text AS "archiveWorkflow",
+    '2.0'::text AS version) aaa) AS "archiveJob"
+FROM submissions s
+WHERE s.status_id = 2
+ORDER BY s.submission_id</pre>
+</td>
+</tr>
+</table>
+</Body>
+</HTML>
