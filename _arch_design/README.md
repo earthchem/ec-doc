@@ -7,10 +7,10 @@ layout: default
 
 # EarthChem Library System Architecture
 ## Server Architecture
-![Server Architecture Diagram](https://github.com/earthchem/ecl-doc/blob/gh-pages/arch_design/ECLSystemServerArchitecture.png)
+![Server Architecture Diagram](https://github.com/earthchem/ecl-doc/blob/gh-pages/_assets/images/ECLSystemServerArchitecture.png)
 
 ## Application Data Flow
-![Application Data Flow Diagram](https://github.com/earthchem/ecl-doc/blob/gh-pages/arch_design/ECLApplicationDataFlowDiagram.png)
+![Application Data Flow Diagram](https://github.com/earthchem/ecl-doc/blob/gh-pages/_assets/images/ECLApplicationDataFlowDiagram.png)
 
 ## Long Term Archive Data Flow
-![Server Architecture Diagram](https://github.com/earthchem/ecl-doc/blob/gh-pages/arch_design/ECL_Long_Term_Archive2.png)
+![Server Architecture Diagram](https://github.com/earthchem/ecl-doc/blob/gh-pages/_assets/images/ECL_Long_Term_Archive2.png)
