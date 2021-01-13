@@ -1,3 +1,10 @@
+---
+name: ogc_wxs
+title: Open Geospatial Consortium (OGC) WxS Services
+date: 01/07/2020
+layout: default
+---
+
 #### Open Geospatial Consortium (OGC) WxS Services
 
   WxS services provides a live access to EarthChem Library sample within dataset location map, dataset core metadata.
