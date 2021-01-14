@@ -1,0 +1,20 @@
+- page: /ecl-doc/README
+  title: System Overview 
+
+- page: /ecl-doc/arch_design/README
+  title: System Architecture Design
+
+- page: /ecl-doc/rest_services/README
+  title: REST API (Beta 1)
+
+- page: /ecl-doc/dbdocs/index.html
+  title: Database Documentation
+
+- page: /ecl-doc/ogc_wxs/README
+  title: GeoServer WMS and WFS
+  
+- page: /ecl-doc/release_notes/
+  title: Release Notes
+
+- page: /ecl-doc/README
+  title: Contact
