@@ -2,7 +2,7 @@
 name: ogc_wxs
 title: Open Geospatial Consortium (OGC) WxS Services
 date: 01/07/2020
-layout: default
+layout: default-ogc_wxs
 ---
 
 #### Open Geospatial Consortium (OGC) WxS Services
