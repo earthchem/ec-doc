@@ -10,7 +10,7 @@ sesar_website: http://www.earthchem.org
 sesar_search: http://www-staging.earthchem.org/?s=
 
 # url: ""
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "ec-doc" # the subpath of your site, e.g. /blog
 description: Documentation for Earthchem as of January 21, 2020
 
 logo_desktop: assets/images/earthchem_full_logo_vertical_bnw.png
