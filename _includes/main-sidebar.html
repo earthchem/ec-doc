@@ -1,0 +1,61 @@
+
+<div class="accordion bg-white shadow-sm" id="sidebar_accordion">
+
+  {% assign sorted_navitems = site.data.sidebar | sort: "display_order" %}
+  
+  {%- for navitem in sorted_navitems -%}
+    
+    {%- if navitem.type == "multiple" -%}
+
+      <div  id="accordion_item_{{ navitem.name }}" class="accordion-item">                    
+        <h4 class="m-0">
+          <button class="accordion-button btn btn-outline-primary border-0 border-light rounded-0 py-3 px-2 text-left w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_{{ navitem.name }}" aria-expanded="true" aria-controls="collapse_{{ navitem.name }}">
+            {{ navitem.title }}
+          </button>
+        </h4>
+        <hr class="m-0"> 
+        <div id="collapse_{{ navitem.name }}" class="accordion-collapse collapse" aria-labelledby="accordion_item_{{ navitem.name }}" data-bs-parent="#sidebar_accordion">
+          <div class="accordion-body list-group">
+
+            {% assign sorted_collection_pages = site[navitem.name] | sort: "order" %}
+
+            {% for item in sorted_collection_pages %}
+              <a href="{{ item.url | absolute_url }}" class="list-group-item list-group-item-action border-0">
+                {{ item.title }}
+              </a>
+            {% endfor %}
+
+          </div>
+        </div>
+      </div>
+
+    {%- else -%}
+
+      <div id="select_item_{{ navitem.name }}">  
+        
+        <h4 class="m-0">
+          
+          {% if navitem.placement == "gh-pages" %}
+            <a class="btn btn-outline-primary border-0 border-light rounded-0 py-3 px-2 text-left w-100" type="button" href="{{ navitem.url | absolute_url }}">
+              {{ navitem.title }}
+            </a>
+          
+          {% endif %}
+          {% if navitem.placement == "github" %}
+
+            <a class="btn btn-outline-primary border-0 border-light rounded-0 py-3 px-2 text-left w-100" type="button" href="https://github.com/{{ site.github_repo }}/{{ site.baseurl }}{{ navitem.url }}">
+              {{ navitem.title }}
+            </a>
+
+          {% endif %}
+
+        </h4>
+      </div>
+
+      <hr class="m-0">
+
+    {%- endif -%}
+
+  {% endfor %}
+
+</div>

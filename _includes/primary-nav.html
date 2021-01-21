@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg bg-primary">
+    <div class="container">
+        <div class="" id="navbarBrand">
+            <a class="navbar-brand p-0 m-0" href="#">
+                <img src="{{ site.logo_desktop | relative_url }}"  width="auto" height="60px" alt="{{ site.title }} desktop logo" class="d-none d-md-inline-block d-lg-inline-block d-sm-none d-md-none m-0 py-1 border-0 shadow-none">
+                <img src="{{ site.logo_mobile | relative_url }}"  width="auto" height="60px" alt="{{ site.title }} mobile logo" class="d-sm-inline-block d-md-none d-lg-none d-xl-none m-0 py-1 border-0 shadow-none">
+            </a>
+        </div>
+
+        <div class="justify-content-center d-lg-block d-xl-block d-md-none d-sm-none d-none">
+            {% include primary-menu.html %}
+        </div>
+
+        <div class="justify-content-end d-lg-block d-xl-block d-md-none d-sm-none d-none">
+            {% include primary-social.html %}
+        </div>
+
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="p-0 w-100 h-100 d-block">
+                <!-- <i class="fa fa-bars text-white"></i> -->
+                <svg width="40" height="40">
+                <rect x="7.5" y="28" rx="1" ry="1" width="25" height="2"
+                style="fill:#fff;" id="top_line"/>
+                <rect x="7.5" y="20" rx="1" ry="1" width="25" height="2"
+                style="fill:#fff;" id="middle_line" />
+                <rect x="7.5" y="12" rx="1" ry="1" width="25" height="2"
+                style="fill:#fff;" id="bottom_line" />
+                </svg>
+            </span>
+        </button>
+    </div>
+</nav>

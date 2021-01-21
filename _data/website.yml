@@ -1,0 +1,19 @@
+- page: about
+  title: About
+  url: overview
+
+- page: support
+  title: Support
+  url: support
+
+- page: synthesis
+  title: Synthesis
+  url: data/access
+
+- page: news
+  title: News
+  url: news
+
+- page: contact
+  title: Contact
+  url: contact

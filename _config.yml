@@ -1,1 +1,66 @@
 theme: jekyll-theme-slate
+title: Resources for Developers
+subtitle: Documentation
+email: jdf@ldeo.columbia.edu
+
+github_username: earthchem
+github_repo: earthchem
+sesar_login: https://app.earthchem.org
+sesar_website: http://www.earthchem.org
+sesar_search: http://www-staging.earthchem.org/?s=
+
+# url: ""
+baseurl: "" # the subpath of your site, e.g. /blog
+description: Documentation for Earthchem as of January 21, 2020
+
+logo_desktop: assets/images/earthchem_full_logo_vertical_bnw.png
+logo_mobile: assets/images/earthchem-bnw.png
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+collections: 
+  ecl:
+    title: Earthchem Library
+    output: true
+    sort_by: title
+    display_order: 1
+  petdb:
+    title: Earthchem PetDB
+    output: true
+    sort_by: title
+    display_order: 2
+  portal:
+    title: Earthchem Portal
+    output: true
+    sort_by: title
+    display_order: 3
+  
+# dbdocs: 
+#   columns:
+#     title: columns
+#   foreignKeys:
+#     title: foreignKeys
+#   indexes:
+#     title: indexes
+#   schemas:
+#     title: schemas
+#   tables:
+#     title: tables
+#   views:
+#     title: views
+#   diagrams:
+#     title: diagrams    
+#   procedures:
+#     title: procedures
+#   sequences:
+#     title: sequences
+#   triggers:
+#     title: triggers
+    
+funder:
+  name: nsf
+  logo: assets/images/nsf-all-color.png
+  description: Hosted at the Lamont-Doherty Earth Observatory of Columbia University and funded by National Science Foundation

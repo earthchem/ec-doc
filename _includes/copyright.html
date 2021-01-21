@@ -1,0 +1,11 @@
+<div id="copyright" class="container w-100 py-2">
+    <div class="row w-100 py-2 m-auto">
+        <img class="p-0 m-auto border-0 shadow-none" src="{{ site.funder.logo | relative_url }}" width="60px" height="60px"/>
+    </div>
+    <div class="row w-50 py-2 text-center m-auto">
+        <div class="w-100 text-center text-white">
+            <p>{{ site.funder.description }}</p>
+            <small>{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></small>
+        </div>
+    </div>
+</div>

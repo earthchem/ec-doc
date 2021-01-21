@@ -1,0 +1,24 @@
+<div id="footer_inner" class="container-lg ">
+    
+    <div id="footer_menu" class="row p-0 m-0 w-100 ">
+        <ul id="main_links" class="d-flex justify-content-center m-0 list-inline">	
+            {% for webpage in site.webpages %}            
+                <li id="menu_item_{{ webpage.label }}" class="nav-item menu-item">
+                    <a  title="Menu item for {{ webpage.name }}" href="{{ webpage.url }}" target="_blank" class="nav-link text-white small font-weight-bold">
+                        {{ webpage.title }}
+                    </a>
+                </li>	
+            {% endfor %}				
+        </ul>
+    </div>
+
+    <div id="footer_social" class="row py-2 m-auto w-100">
+        {% include social.html %}
+    </div>
+
+    <div id="footer_copyright" class="row py-2 m-auto w-100">
+        {% include copyright.html %}
+    </div>
+
+</div>
+

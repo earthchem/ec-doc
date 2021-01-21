@@ -1,0 +1,9 @@
+<ul id="primary-menu" class="navbar-nav">
+    {%- for webpage in site.data.website -%}
+    <li id="primary-menu-item" class="nav-item text-uppercase text-white menu-item p-2">
+        <a href="{{ site.sesar_website }}/{{ webpage.url }}" class="h6 text-light text-decoration-none ">
+            {{ webpage.title }}
+        </a>
+    </li>
+    {%- endfor -%}
+</ul>

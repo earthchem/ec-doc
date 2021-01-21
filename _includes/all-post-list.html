@@ -1,0 +1,20 @@
+<div  id="accordion_item_posts" class="accordion-item">                    
+    <h4 class="m-0">
+      <button class="accordion-button btn btn-outline-primary border-0 border-light rounded-0 py-3 px-2 text-left w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_posts" aria-expanded="true" aria-controls="collapse_posts">
+        Release Notes
+      </button>
+    </h4>
+    <hr class="m-0"> 
+    <div id="collapse_posts" class="accordion-collapse collapse" aria-labelledby="accordion_item_posts" data-bs-parent="#sidebar_accordion">
+      
+      <div class="accordion-body list-group">
+
+        {% for post in site.posts %} 
+          <a href="{{ post.url | absolute_url }}" class="list-group-item list-group-item-action border-0">
+            {{ post.title }}
+          </a>
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,25 @@
+
+
+<div class="accordion bg-white shadow-sm" id="sidebar_accordion">
+    <div class="list-group">
+
+        {{ include.section }}
+            
+            {% for page in site.pages %}
+            
+            
+                {% if page.path contains "dbdocs"  %}
+                
+                <div class="list-group-item">    
+                    {{ page.parent }}
+                </div>
+                
+                {% endif %}
+      
+            {% endfor %}
+     
+    </div>
+  
+</div>
+  
+  
