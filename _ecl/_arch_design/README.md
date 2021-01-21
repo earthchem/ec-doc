@@ -2,7 +2,7 @@
 name: ecl_system_architecture
 title: EarthChem Library System Architecture 
 date: 01/08/2020
-layout: default
+layout: default-ecl
 ---
 
 # EarthChem Library System Architecture
