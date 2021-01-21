@@ -1,3 +1,10 @@
+---
+name: release_notes
+title: EarthChem Library Repository - Release Notes
+date: 08/26/2020
+layout: default-release_notes
+---
+
    [![NSF-1948806](https://img.shields.io/badge/NSF-1928366-blue.svg)](https://nsf.gov/awardsearch/showAward?AWD_ID=1948806)
 
 ## EarthChem Library Repository - Release Notes
