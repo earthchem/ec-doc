@@ -11,7 +11,7 @@ The first step is to separate the interwinded web services and application featu
 
 ##### The swagger documentation can be reached here. https://eclapi.earthchem.org/swagger-ui.html
 
-* The REST API implements the following functions below.
+ * The REST API implements the following functions below.
   * Country
   * DatasetFileList
   * ExternalIdentifierSystem
