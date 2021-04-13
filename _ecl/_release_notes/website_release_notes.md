@@ -14,6 +14,7 @@ layout: default-release_notes
 
 Version | Release Date
 --------|-------------
+[v 4.1.0] | April 13, 2021
 [v 4.0.0](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-400)  | August 26, 2020
 [v 3.6.9](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-369)  | April 27, 2020
 [v 3.6.8](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-368)  | February 4, 2020
@@ -37,6 +38,50 @@ Version | Release Date
 [v 2.4.1](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-241)  | October 25, 2013
 [v 2.4.0](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-240)  | October 4, 2013
 
+#### Version 4.1.0
+* April 2021
+New Features
+
+```
+1. Added new styling to the EarthChem Library to match the new EarthChem website, re-implemented the navigation menu and added content to the website footer.
+2. Added support for download file checksum including instructions on how to validate the checksum found on dataset landing pages.
+3. Created a global heatmap for EarthChem Library datasets.
+4. Added the ability to remove the last file from a submission in MyECL.
+5. Created EarthChem Library container for development.
+```
+Enhancements
+```
+1. Improvements to the file upload process including increasing the number and size of files that can be uploaded to a submission, increasing the number of supported file extensions that can be uploaded, and improving filename validation.
+2. Improved lead Author autofill. 
+3. AstroRepo long term archive has been seperated from EarthChem Library. AstroRepo now has its own S3/Glacier storage on Amazon Web Services and has its own file storage on the server.
+4. The EarthChem Library Long Term Archive has been moved to a new S3/Glacier account.
+5. Python package is moved out from ECL source code tree and updated Python version.
+6. The top 10 most downloaded datasets can be accessed via a new web service.
+7. JSON-LD content was updated according to schema.org and science-schema.org.
+8. Improved the user profile page for users who do not have an ORCID and login with GeoPass.
+9. Added author middle initial to the example citation on submision landing page.
+10. Moved config files out of the source code tree.
+11. Added back end validation for award number to not exceed 256 characters.
+12. Removed the ability to edit First and Last name in user profile when first and last name are already present.
+13. Added instructinos on the user profile page for GeoPass users who do not have an ORCID.
+14. Improved instructions on the submission confirmation page when an error occurs.
+15. The dataset submission form does not display if the user does not have permission or is published.
+```
+Bug Fixes
+```
+1. Fixed bug that allowed 'Other' type award to have award string that exceeded the length limit.
+2. Fixed bug in search results that cleared search results when users filtered search results by Author, release date or title or when users moved to a different page of search results.
+3. Fixed bug that duplicated IGSNs on submission landing pages.
+4. Fixed bug where dataset_doi value was incorrectly formatted.
+5. Fixed bug in the file replacement in MyECL.
+```
+Database Improvements
+```
+1. Added new tables, 'archive_file_checksum' to support dataset checksum values.
+2. Cleaned up 'datasetl_file_list table', which was mismatched on the server file name.
+3. Added 'file_size' column to 'dataset_file_list'.
+4. Consolidated ORCID and SCOPUS calues into 'person' table.
+```
 #### Version 4.0.0
 * August 2020
 ```
