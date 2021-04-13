@@ -39,7 +39,8 @@ Version | Release Date
 [v 2.4.0](https://github.com/earthchem/ecl-doc/blob/master/release_notes/website_release_notes.md#version-240)  | October 4, 2013
 
 #### Version 4.1.0
-* April 2021    
+* April 2021  
+
 New Features
 
 ```
