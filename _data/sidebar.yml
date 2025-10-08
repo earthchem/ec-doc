@@ -1,0 +1,27 @@
+- name: index
+  title: System Overview
+  url: /
+  placement: gh-pages
+  type: singular
+  display_order: 1
+
+- name: arch_design
+  title: System Architecture Design
+  url: /architecture-design
+  placement: gh-pages
+  type: singular
+  display_order: 2
+
+- name: release_notes
+  title: Release Notes
+  url: /release_notes/overview
+  placement: gh-pages
+  type: multiple
+  display_order: 3
+
+- name: developer_discussions
+  title: Developer Discussions
+  url: /discussions/
+  placement: github
+  type: singular
+  display_order: 4

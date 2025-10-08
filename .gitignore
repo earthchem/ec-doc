@@ -1,0 +1,53 @@
+#----------------------------------------
+# Jekyll build output
+#----------------------------------------
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+#----------------------------------------
+# Dependency & environment folders
+#----------------------------------------
+vendor/
+.bundle/
+node_modules/
+
+#----------------------------------------
+# OS / Editor cruft
+#----------------------------------------
+.DS_Store
+Thumbs.db
+*.swp
+*~
+*.sublime-workspace
+*.sublime-project
+.idea/
+.vscode/
+
+#----------------------------------------
+# Logs & temp
+#----------------------------------------
+*.log
+*.tmp
+
+#----------------------------------------
+# Ruby & Bundler
+#----------------------------------------
+Gemfile.lock
+coverage/
+.byebug_history
+
+#----------------------------------------
+# Build artifacts (if using CI/CD)
+#----------------------------------------
+/public
+/.jekyll-cache/
+/tmp/
+
+#----------------------------------------
+# Fonts
+#----------------------------------------
+# Keep the actual font files in version control so Pages can serve them.
+# If you use local dev copies or generated fonts, ignore those:
+# e.g. /assets/fonts/*.ttf

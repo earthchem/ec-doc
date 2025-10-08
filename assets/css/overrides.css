@@ -1,0 +1,45 @@
+:root {
+    --font-narrow: "Hex Franklin Narrow", sans-serif;
+    --font-condensed: "Hex Franklin Condensed", sans-serif;
+}
+
+body {
+    font-family: var(--font-narrow);
+}
+
+/* Map heading levels like your MUI theme */
+h1 {
+    font-family: var(--font-condensed);
+    font-size: 6rem;
+}
+h2 {
+    font-family: var(--font-condensed);
+    font-size: 3.75rem;
+}
+h3 {
+    font-family: var(--font-condensed);
+    font-size: 3rem;
+}
+h4 {
+    font-family: var(--font-condensed);
+    font-size: 2.125rem;
+}
+h5 {
+    font-family: var(--font-condensed);
+    font-size: 1.5rem;
+}
+h6 {
+    font-family: var(--font-condensed);
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+p,
+body,
+.body1,
+.body2,
+caption,
+.subtitle1,
+.subtitle2 {
+    font-family: var(--font-narrow);
+}
