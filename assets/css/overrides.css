@@ -10,27 +10,27 @@ body {
 /* Map heading levels like your MUI theme */
 h1 {
     font-family: var(--font-condensed);
-    font-size: 6rem;
+    font-size: 3rem;
 }
 h2 {
     font-family: var(--font-condensed);
-    font-size: 3.75rem;
+    font-size: 2.75rem;
 }
 h3 {
     font-family: var(--font-condensed);
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 h4 {
     font-family: var(--font-condensed);
-    font-size: 2.125rem;
+    font-size: 2rem;
 }
 h5 {
     font-family: var(--font-condensed);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 h6 {
     font-family: var(--font-condensed);
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     font-weight: 400;
 }
 

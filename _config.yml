@@ -23,8 +23,11 @@ title: Resources for Developers
 subtitle: Documentation
 email: jdf@ldeo.columbia.edu
 
+facebook_username: earthchem
 github_username: earthchem
 github_repo: earthchem
+github_owner: figueroadjuan
+author: Juan David (JD) Figueroa
 sitename: earthchem
 website: https://www.earthchem.org
 
@@ -42,6 +45,11 @@ plugins:
 
 collections:
     arch_design:
+        title:
+        output: true
+        sort_by: title
+        display_order: 1
+    documentation:
         title:
         output: true
         sort_by: title

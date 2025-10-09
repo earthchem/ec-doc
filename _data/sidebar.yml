@@ -5,11 +5,11 @@
   type: singular
   display_order: 1
 
-- name: arch_design
-  title: System Architecture Design
-  url: /architecture-design
+- name: documentation
+  title: Documentation
+  url: /documentation/overview
   placement: gh-pages
-  type: singular
+  type: multiple
   display_order: 2
 
 - name: release_notes

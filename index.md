@@ -7,6 +7,73 @@ layout: default
 
 [![NSF-1948806](https://img.shields.io/badge/NSF-1928366-blue.svg)](https://nsf.gov/awardsearch/showAward?AWD_ID=1948806)
 
+# EarthChem Systems
+
+Welcome to the **EarthChem Systems - Technical Documentation**, a collection of web-based tools that enable geochemical data discovery, synthesis, and analysis.
+
+Each application below includes links to its detailed documentation and latest release notes.
+
+---
+
+## 1. PetDB Synthesis Interface
+
+**Purpose:**  
+Interactive global interface for exploring and exporting geochemical sample data.  
+It supports dynamic filtering by analytical features, and sample features, as well as additional lookups.
+
+**Key Features:**
+
+-   3D globe and polar map projections.
+-   Flexible filters for geochemical datasets.
+-   Export in CSV or JSON formats via AWS pipeline.
+-   Integration with DynamoDB, S3, and OpenSearch.
+
+**Links:**
+
+-   [Documentation](./documentation/synthesis.html)
+
+---
+
+## 2. PetDB API
+
+**Purpose:**  
+Provides structured access to PetDB data for programmatic integration.  
+Supports filtering, aggregation, and advanced querying across samples, analyses, and citations.
+
+**Key Features:**
+
+-   RESTful Node.js API with Express and OpenSearch.
+-   Endpoint access for sample, material, and feature data.
+-   JSON response format optimized for research pipelines.
+-   Authentication and rate limiting built-in.
+
+**Links:**
+
+-   [Documentation](./documentation/petdb_api.html)
+-   [Release Notes](./release_notes/petdb_api.html)
+
+---
+
+## 3. Export Service
+
+**Purpose:**  
+Handles all user-initiated export requests across the EarthChem platform.  
+Built on Node.js/Express with DynamoDB task tracking, S3 streaming, and email notifications.
+
+**Key Features:**
+
+-   Async queue-based processing for large datasets.
+-   File-type support for JSON and CSV.
+-   Secure S3 upload with expiring download links.
+-   Auto-email notifications when exports complete.
+
+**Links:**
+
+-   [Documentation](./documentation/export_service.html)
+-   [Release Notes](./release_notes/export_service.html)
+
+---
+
 ## EarthChem Library Tech Documentation
 
 EarthChem Library (ECL) is a data repository that archives, publishes and makes accessible data and other digital content from geoscience research (analytical data, data syntheses, models, technical reports, etc).
