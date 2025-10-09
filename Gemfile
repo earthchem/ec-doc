@@ -11,6 +11,5 @@ gem "jekyll-theme-slate"
 
 # Add other plugins you used before
 gem "jekyll-feed", "~> 0.17"
-gem "jekyll-seo-tag"
 gem "jekyll-sitemap"
 gem "jekyll-seo-tag"
