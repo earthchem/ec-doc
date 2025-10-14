@@ -71,11 +71,6 @@ Each export request creates a **unique task** with a lifecycle managed through t
 
 ##### 1. Security
 
-###### Authentication & Authorization
-
--   Enforced via **API keys or OAuth**.
--   Only authorized users can initiate or view exports (Synthesis/API).
-
 ###### Data Protection
 
 -   Files encrypted before storage.
